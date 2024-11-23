@@ -1,0 +1,99 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+nav .mobile {
+  display: none;
+}
+
+nav .mobile .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .mobile .header .more button {
+  border: none;
+  background-color: blueviolet;
+  padding: 15px;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+nav .logo {
+  min-width: 250px;
+  max-width: 400px;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+  color: purple;
+  padding: 10px 15px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #66afe3;
+}
+
+nav .desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+}
+
+nav .desktop .primarios,
+nav .desktop .secondary {
+  display: flex;
+}
+
+nav .desktop .secondary.mini {
+  display: none;
+}
+
+@media screen and (max-width: 1195px) {
+  nav .logo {
+    min-width: 100px;
+  }
+
+  nav .secondary.full {
+    display: none;
+  }
+
+  nav .secondary.mini {
+    display: block !important;
+  }
+
+  nav .secondary.mini .submenu {
+    background-color: aquamarine;
+    position: absolute;
+    display: none;
+    width: 200px;
+    right: 0;
+  }
+
+  nav .secondary.mini:hover .submenu {
+    display: block !important;
+    background-color: aquamarine;
+    color: aqua;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  nav .desktop {
+    display: none;
+  }
+  nav .mobile {
+    display: block !important;
+  }
+}
