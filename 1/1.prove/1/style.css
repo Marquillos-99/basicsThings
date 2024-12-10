@@ -8,73 +8,66 @@ body {
 nav {
   background-color: black;
   color: white;
-  display: non;
-}
-
-nav .mobile {
-  display: none;
-}
-
-nav .mobile .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav .mobile .header .mas button {
-  background-color: blueviolet;
-  border: none;
-  padding: 15px;
-  border-radius: 5%;
-  cursor: pointer;
-}
-
-nav .logo {
-  min-width: 250px;
-  max-width: 500px;
-}
-
-nav a {
-  text-decoration: none;
-  display: block;
-  color: white;
-  padding: 10px 15px;
-}
-
-nav a:hover {
-  color: yellow;
-  background-color: darkblue;
+  padding: 10px;
 }
 
 nav .desktop {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 50px;
+  padding: 0 50px;
 }
 
 nav .desktop .links {
   display: flex;
-}
-
-nav .desktop .dropdown-content .button {
-  background-color: blueviolet;
-  border: none;
-  justify-content: center;
   align-items: center;
-  padding-top: 10px;
 }
 
-nav .desktop .links .dropdown-content {
+nav .desktop .links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+}
+
+nav .desktop .links a:hover {
+  color: yellow;
+  background-color: darkblue;
+}
+
+nav .desktop .links .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+nav .desktop .links .dropdown .button {
+  background-color: brown;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+nav .desktop .links .dropdown .dropdown-content {
   display: none;
+  position: absolute;
+  background-color: darkblue;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-@media screen and(max-width: 905px) {
-  nav.logo {
-    min-width: 100px;
-  }
+nav .desktop .links .dropdown .dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-  nav .dropdown-content {
-    display: block !important;
-  }
+nav .desktop .links .dropdown .dropdown-content a:hover {
+  background-color: bisque;
+  color: black;
+}
+
+nav .desktop .links .dropdown:hover .dropdown-content {
+  display: block;
 }
